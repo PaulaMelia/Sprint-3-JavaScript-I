@@ -72,5 +72,19 @@ function generateCart() {
 
 }
 
-
+// Exercise 5
+function applyPromotionsCart() {
+    // Aplicar promociones a cada artículo de la matriz "carrito"
+    for (let i = 0; i < cart.length; i++){
+        if(cart[i].id === 1 && cart[i].quantity >= 3){
+          let priceDiscount = 10;
+          cart[i].subtotalWithDiscount = priceDiscount * cart[i].quantity;
+        } else if (cart[i].id === 3 && cart[i].quantity >= 10){
+          let priceDiscount3 = (cart[i].price / 3) * 2;
+          cart[i].subtotalWithDiscount = priceDiscount3.toFixed(2) * cart[i].quantity;
+        } else{
+            cart[i].subtotalWithDiscount = cart[i].subtotal;
+        }
+      }
+    }
 
