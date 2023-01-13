@@ -88,3 +88,46 @@ function applyPromotionsCart() {
       }
     }
 
+    // Exercise 6
+function printCart() {
+    // Llene el modal del carrito de compras manipulando el dom del carrito de compras
+    let total = 0;
+    document.getElementById("cart_list").innerHTML = "";
+    for(let i=0; i<cart.length; i++){
+        let name = cart[i].name;
+        let price = cart[i].price;
+        let quantity = cart[i].quantity;
+        let totalWithDiscount = cart[i].subtotalWithDiscount;
+        document.getElementById("cart_list").innerHTML += `<tr>
+        <th scope="row">${name}</th>
+        <td>${price}</td>
+        <td>${quantity}</td>
+        <td>${totalWithDiscount}</td>
+        </tr>`
+        total += totalWithDiscount;
+        document.getElementById("total_price").innerHTML = total;
+        }
+
+}
+
+
+// ** Nivell II **
+
+// Exercise 7
+function addToCart(id) {
+    // Refactor previous code in order to simplify it 
+    // 1. Loop for to the array products to get the item to add to cart
+    // 2. Add found product to the cart array or update its quantity in case it has been added previously.
+}
+
+// Exercise 8
+function removeFromCart(id) {
+    // 1. Loop for to the array products to get the item to add to cart
+    // 2. Add found product to the cartList array
+}
+
+function open_modal(){
+	console.log("Open Modal");
+	printCart();
+}
+
