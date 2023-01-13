@@ -53,3 +53,24 @@ function calculateTotal() {
     return total;
 }
 
+// Exercise 4
+function generateCart() {
+    // Usando la array "cartlist" que contiene todos los artículos en el carrito de compras,
+    // Genere la array "carrito" que no contiene artículos repetidos, sino que cada artículo de esta matriz "carrito" muestra la cantidad de producto.
+    cartList.forEach((item) =>{
+        let newItem = cart.find((it) => it.id === item.id);
+        if(newItem){
+          newItem.quantity +=1;
+        } else {
+          newItem ={...item, quantity: 1, subtotal:0, subtotalWithDiscount: 0};
+          cart.push(newItem);
+        }
+       });
+       applyPromotionsCart()
+       console.log(cart);
+
+
+}
+
+
+
