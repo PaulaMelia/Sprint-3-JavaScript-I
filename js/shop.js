@@ -23,4 +23,33 @@ function buy(id) {
       }  
     
     
+// Exercise 2
+function cleanCart(id) {
+    /*for(let i=0;i<cartList.length;i++){
+        if(cartList[i].id==id){
+            cartList.splice(i,1);
+            console.log('Item removed from cart:', id);
+            break;
+        }*/
+        cart.length = 0;
+        cartList.length = 0;
+        console.log(cartList);
+          document.getElementById("total_price").innerHTML = 0;
+          document.getElementById("cart_list").innerHTML = "";
+          document.getElementById("count_product").innerHTML = 0;
+          alert('Your shopping cart is clean');
+    }
+
+
+
+// Exercise 3
+function calculateTotal() {
+    // Calcule el precio total del carrito usando la array "cartList"
+    total=0
+    for(let i=0;i<cartList.length;i++){
+        total+=cartList[i].price;
+    }
+    console.log(total);
+    return total;
+}
 
