@@ -2,7 +2,7 @@
 // Exercise 6
 function validate() {
 	var error = 0;
-	// Get the input fields
+	// Obtener los campos de entrada
 	var fName = document.getElementById("fName");
 	var fEmail = document.getElementById("fEmail");
 
@@ -10,7 +10,7 @@ function validate() {
 	var errorName = document.getElementById("errorName");
 	var errorEmail = document.getElementById("errorEmail");  
 	
-	// Validate fields entered by the user: name, phone, password, and email
+	//Validar campos ingresados ​​por el usuario: nombre, teléfono, contraseña y correo electrónic
 	if(fName.value == ""){
 		error++;
 	}
